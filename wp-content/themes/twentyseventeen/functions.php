@@ -585,6 +585,8 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
+############################below are the custom endpoint registration
+
 function getproperty($data) {
 	global $wpdb;
 	$query = "SELECT * FROM tblProperty WHERE propertyName ='HQ Sentoria Themparks and Resorts Sdn. Bhd.'";
@@ -600,3 +602,5 @@ add_action('rest_api_init', function () {
 		'callback' => 'getproperty'
 	));
 });
+
+################################
